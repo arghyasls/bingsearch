@@ -15,6 +15,10 @@ from flask import request
 
 app = Flask(__name__)
 
+@app.route('/')
+def get():
+    return 'hello'
+
 @app.route('/connections', methods = ['POST'])
 def postJsonHandler():
     content = request.get_json()
